@@ -32,10 +32,10 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if(to.path == "/login" && auth.currentUser){
-    next("/dashboard");
+    next("https://trabajo05-pagina-vue.vercel.app/dashboard");
   }
   else if(to.matched.some((record) => record.meta.auth) && !auth.currentUser){
-    next("/login");
+    next("https://trabajo05-pagina-vue.vercel.app/login");
   }
   else{
     next();
