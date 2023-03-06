@@ -30,7 +30,7 @@ export const useUserStore = defineStore("user", {
                 return;
             }
             this.user = auth.currentUser;
-            this.$router.push("/dashboard");
+            this.$router.push("https://trabajo05-pagina-vue.vercel.app/dashboard");
         },
         async login(email, password){
             try {
@@ -48,12 +48,12 @@ export const useUserStore = defineStore("user", {
                 return;
             }
             this.user = auth.currentUser;
-            this.$router.push("/dashboard");
+            this.$router.push("https://trabajo05-pagina-vue.vercel.app/dashboard");
         },
         async logout(){
             await signOut(auth)
             this.user = null;
-            this.$router.push("/login");
+            this.$router.push("https://trabajo05-pagina-vue.vercel.app/login");
         }
     },
 });
